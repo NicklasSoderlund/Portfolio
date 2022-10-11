@@ -17,9 +17,15 @@
     }
     a > i {
         color: white;
+        transition: 0.3s;
+        &:hover {
+            transform: scale(1.25);
+            transition: 0.3s ease-in-out;
+        }
     }
     .footer-links {
         display: flex;
         justify-content: space-around;
     }
 }
+

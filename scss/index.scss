@@ -1,0 +1,26 @@
+.main-content {
+    height: 200px;
+    background-color: plum;
+}
+
+#carousel {
+
+    .carousel-item {
+     height: auto;
+     width: 100%;
+     img {
+        height:100%;
+     }
+    }
+    
+}
+
+#carousel-container {
+    display: flex;
+    justify-content: center;
+
+}
+
+#carousel-width {
+    width: 100%;
+}
