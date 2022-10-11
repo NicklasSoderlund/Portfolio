@@ -137,14 +137,15 @@ html, body {
 }
 .footer-container {
   background-color: purple;
-  height: 22vh;
-  position: absolute;
+  height: 25%;
+  position: relative;
   bottom: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
+  margin-top: 2em;
 }
 .footer-container .footer-icon {
   margin: 1em 0;
@@ -152,7 +153,6 @@ html, body {
 .footer-container p {
   font-size: large;
   line-height: 130%;
-  margin-bottom: 1em;
 }
 .footer-container a > i {
   color: white;
@@ -165,10 +165,11 @@ html, body {
 .footer-container .footer-links {
   display: flex;
   justify-content: space-around;
+  margin: 1.2em 0;
 }
 
 .main-content {
-  height: 200px;
+  height: 400px;
   background-color: plum;
 }
 
