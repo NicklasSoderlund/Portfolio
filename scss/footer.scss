@@ -9,11 +9,13 @@
     align-items: center;
     color: white;
     .footer-icon {
-        margin-top: 1em;
+        margin: 1em 0;
+
     }
     p {
         font-size: large;
         line-height: 130%;
+        margin-bottom: 1em;
     }
     a > i {
         color: white;
