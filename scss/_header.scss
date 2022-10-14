@@ -11,6 +11,14 @@
     color: #FFF;
     height: 50px;
     padding: 1em;
+    border-bottom: 1px solid white;
+    a {
+      text-decoration: none;
+      color: white;
+      &:hover {
+        color: white;
+      }
+    }
   }
 
 
@@ -21,6 +29,7 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+    z-index: 15;
   }
   
   .menu > li {
@@ -123,9 +132,18 @@
     nav > ul > li {
         transition: 0.2s;
         cursor: pointer;
+        color: white;
         &:hover {
             transform: scale(1.15);
             transition: 0.2s;
+          
+        }
+        a {
+          text-decoration: none;
+          color: white;
+          &:hover {
+            color: white;
+          }
         }
     }
     

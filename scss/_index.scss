@@ -1,0 +1,142 @@
+@use "mixins" as m;
+
+main {
+    background: linear-gradient(to left, #4f0c50, #4c1777);
+    z-index: 5;
+}
+
+.main-content {
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0.7em;
+    z-index: 5;
+    @include m.desktop {
+        height: 500px;
+        flex-direction: row;
+        justify-content: center;
+        width: 70%;
+        margin: auto;
+    }
+    .main-content-img {
+        height: 60%;
+        z-index: inherit;
+        img {
+            max-height: 100%;
+        }
+    }
+    .main-content-herotext {
+        text-align: center;
+        color: white;
+        z-index: inherit;
+        h1 {
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            padding: 3% 0 1% 0;
+            
+        }
+        h2 {
+            font-weight: 580;
+        }
+
+    }
+}
+
+#carousel {
+z-index: 5;
+    .carousel-item {
+     height: 100%;
+     width: 100%;
+     z-index: inherit;
+    }
+    
+}
+
+#carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5em;
+    color: white;
+    z-index: 5;
+    h2 {
+        text-align: center;
+        font-size: 2em;
+        font-weight: 500;
+        @include m.desktop {
+            font-size: 2.7em;
+        }
+    }
+    @include m.desktop {
+        width: 70%;
+        margin: auto;
+    }
+}
+
+#carousel-width {
+    width: 95vw;  
+    z-index: 5;
+    @include m.tablet {
+        width: 700px;
+    }
+    @include m.desktop {
+        width: 800px;
+    }
+}
+
+// Snowy background
+
+$d: 3;      // density
+$w: 220;     // grid size
+$s: 10s;       // speed
+
+// Generate the snow image using radial gradients
+$grad: ();
+@for $i from 0 to $d {
+  $v: random(4) + 2;
+  $a: random(5) * .1 + .5;
+  $grad: $grad, radial-gradient(
+      $v+px $v+px at
+      (random($w - $v * 2) + $v)+px
+      (random($w - $v * 2) + $v)+px, 
+      rgba(255,255,255,$a) 50%,
+      rgba(0,0,0,0)
+  ) !global;
+}
+
+
+.snow, .snow:before, .snow:after {
+  position: absolute;
+  top: -$w + px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: $grad;
+  background-size: $w + px $w + px;
+  animation: snow $s linear infinite;
+  content: "";
+  overflow: hidden;
+  z-index: 0;
+  
+}
+.snow:after {
+  margin-left: (-$w/3) + px;
+  opacity: .15;
+  animation-duration: $s*2;
+  animation-direction: reverse;
+  filter: blur(3px);
+}
+.snow:before {
+  animation-duration: $s*3;
+  animation-direction: reverse;
+  margin-left: (-$w/2) + px;
+  opacity: .25;
+  filter: blur(1.5px);
+}
+@keyframes snow {
+  to {
+    transform: translateY($w + px);
+    z-index: 0;
+  }
+}
