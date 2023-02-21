@@ -6,7 +6,7 @@ export function Presentation() {
     const heartIcon = <FontAwesomeIcon icon={faHeart}/>;
 
     return(<div className="presentation">
-      <div>  <span className="presentationTitle"> Welcome. <i>{heartIcon}</i></span>   </div>
+      <div>  <span className="presentationTitle"> Welcome.</span>   </div>
 
       <div className="presentationText">
         <p>My name is Nicklas Söderlund, a web developer student based in Stockholm, Sweden.
