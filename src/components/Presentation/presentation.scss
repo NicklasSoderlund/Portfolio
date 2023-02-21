@@ -1,0 +1,21 @@
+
+
+.presentation {
+    width: 85%;
+    text-align: left;
+    margin: auto;
+    margin-top: 1.5em;
+    .presentationTitle {
+        font-weight: 300;
+        font-size: 4em;
+        i {
+            font-size: 0.8em;
+        }
+    }
+}
+
+.presentationText {
+   width: fit-content;
+   padding-left: 1.6em;
+   border-left: 2px solid red;
+}

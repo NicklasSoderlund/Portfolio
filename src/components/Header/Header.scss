@@ -7,7 +7,8 @@ header {
   width: 100vw;
 
     #navbar {
-        padding: 1em 1.5em 0 0;
+        padding: 3.2em 1.5em 0 0;
+        transition: transform 0.3s;
         ul {
 
             padding: 0;
@@ -16,10 +17,16 @@ header {
             list-style-type: none;
             gap: 20px;
             font-size: 1.5em;
+            li {
+                transition: transform 0.3s;
+                &:hover {
+                    transform: scale(1.25);
+                }
+            }
     
             a {
                 text-decoration: none;
-                color: black;
+                color: #777;
             }
           
         }
@@ -28,8 +35,14 @@ header {
 }
 
 #cornerIcon {
-    font-size: 2em;
-    padding: 0.3em 0 0 0.7em;
+    padding: 1.3em 0 0 1.3em;
+   img {
+    transition: transform 0.3s;
+    &:hover {
+        transform: scale(1.1);
+    }
+   
+   }
 }
 
 

@@ -1,19 +1,19 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPersonRays } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import "./header.scss";
+import pixelArtLogo from "./pixel.png";
 
 export function Header() {
 
     const linkedInIcon = <FontAwesomeIcon icon={faLinkedin}/>
     const mailIcon = <FontAwesomeIcon icon={faEnvelope}/>
     const gitHubIcon = <FontAwesomeIcon icon={faGithub}/>
-    const cornerIcon = <FontAwesomeIcon icon={faPersonRays}/>
 
     return ( 
     <header>
     <div id="cornerIcon">
-        <span>{cornerIcon}</span>
+        <img src={pixelArtLogo} alt="" />
     </div>
     <div id="navbar">
         <ul>
