@@ -9,14 +9,25 @@ export function ProjectDisplay() {
   const repoFetch = async () => {
     
       let response = await repoService("Finished-Design");
-      console.log(response)
       setRepo(response)
 
   }
   useEffect(() => {repoFetch();}, []);
-  console.log(repo)
+
 
   return (
-    <div></div>
+    <div className="presentation">
+       
+       <div> <span className="presentationTitle">{repo?.name}</span></div>
+       <div className="presentationText"><p>{repo?.description}</p>
+           
+           <div>    
+            <p>Main Language: {repo?.language}</p>
+            <p><a href={repo?.html_url}>Github Repo</a></p>
+           </div>
+           
+        </div>
+
+    </div>
   )
 }

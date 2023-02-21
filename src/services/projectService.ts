@@ -26,7 +26,6 @@ export async function repoService(repo:string) {
 
   let response = await axios.get("https://api.github.com/repos/NicklasSoderlund/" + repo
   )
-  console.log(response.data);
   return response.data as IOctokitResponse
   
 
