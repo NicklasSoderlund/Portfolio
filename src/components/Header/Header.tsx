@@ -3,6 +3,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import "./header.scss";
 import pixelArtLogo from "./pixel.png";
+import { Link } from "react-router-dom";
 
 export function Header() {
 
@@ -13,7 +14,7 @@ export function Header() {
     return ( 
     <header>
     <div id="cornerIcon">
-        <img src={pixelArtLogo} alt="" />
+     <Link to="/"><img src={pixelArtLogo} alt="" /></Link>
     </div>
     <div id="navbar">
         <ul>

@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import { Header } from "../Header/Header";
 import { Presentation } from "../Presentation/Presentation";
 import { Projects } from "../Projects/Projects";
@@ -9,8 +10,7 @@ export function Startpage() {
        
         <main className="pageContainer">
         <Header></Header>
-       
-        <Presentation></Presentation>
+        <Outlet></Outlet>
         <Projects></Projects>
 
 

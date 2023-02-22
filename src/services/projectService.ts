@@ -1,14 +1,13 @@
 import axios from "axios";
-import { Octokit } from "octokit";
 import { useState } from "react";
 import { IOctokitResponse } from "../models/IOctokitResponse";
 
 
-const octokit = new Octokit({
+/* const octokit = new Octokit({
     auth: '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'
-  });
+  }); */
 
-export async function projectService(project:string) {
+/* export async function projectService(project:string) {
     
  
 
@@ -18,9 +17,8 @@ export async function projectService(project:string) {
    })
      ;
     return response 
-  
 
-}
+} */
 
 export async function repoService(repo:string) {
 

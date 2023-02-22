@@ -1,24 +1,43 @@
-import { Octokit } from "octokit";
+
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { IOctokitResponse } from "../../models/IOctokitResponse";
-import { projectService, repoService } from "../../services/projectService";
+import {  repoService } from "../../services/projectService";
 
 export function ProjectDisplay() {
-  const [repo, setRepo] = useState<IOctokitResponse>() 
+  const [repo, setRepo] = useState<IOctokitResponse>();
+  const [currentId, setCurrentId] = useState<string>("");
+
+  const { id } = useParams();
+  
+ 
+    useEffect(() => {   
+      if (id === "1")
+      setCurrentId("Finished-Design")
+      if (id === "2")
+      setCurrentId("TodoList")
+      if (id === "3")
+      setCurrentId("Webshop-GroupProject")
+   },[id]);
+
+   console.log(currentId);
+  
+ 
+
  
   const repoFetch = async () => {
     
-      let response = await repoService("Finished-Design");
+      let response = await repoService(currentId);
       setRepo(response)
 
   }
-  useEffect(() => {repoFetch();}, []);
+  useEffect(() => {repoFetch();}, [currentId]);
 
 
   return (
     <div className="presentation">
        
-       <div> <span className="presentationTitle">{repo?.name}</span></div>
+       <div> <span className="projectTitle">{repo?.name}</span></div>
        <div className="presentationText"><p>{repo?.description}</p>
            
            <div>    
