@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "./projects.scss"
 
 export function Projects() {
@@ -8,9 +9,9 @@ export function Projects() {
             </div>
 
             <div id="projectsList">
-                 <span>Finished Design</span>
-                 <span>Todo-List</span>
-                 <span>Webshop</span>
+                 <span><Link to="project/1">Finished-Design</Link></span>
+                 <span><Link to="project/2">TodoList</Link></span>
+                 <span><Link to="project/3">Webshop</Link></span>
             </div>
     </div> )
 }
