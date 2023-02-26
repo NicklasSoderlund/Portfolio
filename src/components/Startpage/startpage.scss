@@ -1,0 +1,45 @@
+
+.pageContainer {
+    background:
+    linear-gradient(to right, #9c0c0c 4px, transparent 4px) 0 0,
+    linear-gradient(to bottom, #9c0c0c 4px, transparent 4px) 0 0;
+  background-repeat: no-repeat;
+background-size: 90px 90px;
+border-radius: 0.5%;
+margin: 0.05em;
+}
+
+.innerContent {
+    display: flex;
+    flex-direction: column;
+    gap:2em;
+    padding-top: 2em;
+}
+
+@media only screen and (min-width: 1000px) {
+    .pageContainer {
+
+        width: 60vw;
+        height: 70vh;
+        margin: auto;
+         background:
+         linear-gradient(to right, #9c0c0c 4px, transparent 4px) 0 0,
+         linear-gradient(to bottom, #9c0c0c 4px, transparent 4px) 0 0,
+         linear-gradient(to left, #9c0c0c 4px, transparent 4px) 100% 100%,
+         linear-gradient(to top, #9c0c0c 4px, transparent 4px) 100% 100%;
+         background-repeat: no-repeat;
+background-size: 120px 120px;
+border-radius: 0.5%;
+margin: 0.05em;
+padding: 1em;
+    }
+
+    .innerContent {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 84%;
+        padding: 0;
+    }
+
+}

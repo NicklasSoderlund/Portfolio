@@ -3,6 +3,14 @@ import "./projects.scss"
 
 export function Projects() {
 
+    
+ 
+    //  function animate() {
+    //     let animationContainer = (document.querySelector("#animation") as HTMLDivElement );
+    //     animationContainer.style.opacity = "1";
+    //     console.log(animationContainer.style.opacity);
+    // }  
+
     return ( <div id="projects">
             <div>
                 <span id="projectsTitle">Projects</span>

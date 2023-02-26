@@ -18,9 +18,9 @@ export function Header() {
     </div>
     <div id="navbar">
         <ul>
-            <li><a href="">{mailIcon}</a></li>
-            <li><a href="">{linkedInIcon}</a></li>
-            <li><a href="">{gitHubIcon}</a></li>
+            <li><a href="mailto: nicklassoderlund96@gmail.com">{mailIcon}</a></li>
+            <li><a href="https://www.linkedin.com/in/nicklas-söderlund">{linkedInIcon}</a></li>
+            <li><a href="https://www.github.com/NicklasSoderlund">{gitHubIcon}</a></li>
         </ul>
     </div>
    </header>            

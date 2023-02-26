@@ -7,7 +7,9 @@
     margin-top: 1.5em;
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    height: 300px;
+    justify-content: center;
+    gap: 1.5em;
     .presentationTitle {
         font-weight: 300;
         font-size: 3.5em;
@@ -15,11 +17,32 @@
 }
 .projectTitle {
     font-weight: 300;
-        font-size: 2.5em;
+        font-size: 3em;
 }
 
 .presentationText {
-   width: fit-content;
+   width: 85%;
    padding-left: 1.6em;
-   border-left: 2px solid red;
+   border-left: 2px solid #9c0c0c;
+   
+
+}
+
+// #animation {
+//     transition: 2s all ease-in-out;
+//     opacity: 1;
+// }
+
+@media only screen and (min-width: 1000px) {
+    .presentation {
+       padding-left: 3em;
+       margin: 0;
+       height: fit-content;
+    }
+    .presentationText {
+         width: fit-content;
+       
+    }
+
+
 }

@@ -4,6 +4,7 @@
     text-align: left;
     margin: auto;
     margin-top: 1.5em;
+ 
     #projectsTitle {
         font-weight: 300;
         font-size: 3em;
@@ -22,10 +23,34 @@
    gap: 1.5em;
    font-size: 1.2em;
    background:
-   linear-gradient(to right, red 2px, transparent 2px) 0 0,
-   linear-gradient(to bottom, red 2px, transparent 2px) 0 0;
+   linear-gradient(to right, #9c0c0c 2px, transparent 2px) 0 0,
+   linear-gradient(to bottom, #9c0c0c 2px, transparent 2px) 0 0;
+   a {
+     text-decoration: none;
+     color: #d1d1d1;
+  
+   }
+   span {
+    padding-bottom: 0.2em;
+    border-bottom: 2px solid #d1d1d1;
+   }
 
  background-repeat: no-repeat;
  background-size: 70px 70px;
- border-radius: 2%;
+ border-radius: 1%;
+}
+
+@media only screen and (min-width: 1000px) {
+  #projects {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: left;
+    padding-right: 3em;
+    margin: 0;
+    width: 30%;
+  }
+   #projectsTitle {
+    padding-right: 0.6em;
+   }
 }

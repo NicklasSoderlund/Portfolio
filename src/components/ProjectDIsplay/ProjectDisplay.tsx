@@ -19,23 +19,24 @@ export function ProjectDisplay() {
       if (id === "3")
       setCurrentId("Webshop-GroupProject")
    },[id]);
-
-   console.log(currentId);
-  
  
-
+ 
  
   const repoFetch = async () => {
-    
+    if (currentId !== "") {
       let response = await repoService(currentId);
       setRepo(response)
+    }
+      
 
   }
   useEffect(() => {repoFetch();}, [currentId]);
 
 
+
   return (
-    <div className="presentation">
+  
+    <div className="presentation" id="animation">
        
        <div> <span className="projectTitle">{repo?.name}</span></div>
        <div className="presentationText"><p>{repo?.description}</p>
