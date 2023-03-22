@@ -10,7 +10,7 @@ export function Startpage() {
      
         <Header></Header>
   
-        <Projects></Projects>
+        {/* <Projects></Projects> */}
 
 
    </main>

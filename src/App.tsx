@@ -9,8 +9,8 @@ import { Startpage } from './components/Startpage/Startpage';
 function App() {
   return (
     <>
-<Startpage></Startpage>
-   <ProjectDisplay></ProjectDisplay>
+{/* <Startpage></Startpage>
+   <ProjectDisplay></ProjectDisplay> */}
    </>
   );
 }

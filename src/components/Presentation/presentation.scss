@@ -1,7 +1,7 @@
 
 
 .presentation {
-    width: 85%;
+    min-width: 85%;
     text-align: left;
     margin: auto;
     margin-top: 1.5em;
@@ -35,7 +35,6 @@
 
 @media only screen and (min-width: 1000px) {
     .presentation {
-       padding-left: 3em;
        margin: 0;
        height: fit-content;
     }

@@ -1,15 +1,22 @@
+import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom"
+import { IOctokitResponse } from "../../models/IOctokitResponse"
+import { RepoContext } from "../Startpage/Startpage";
 import "./projects.scss"
+
+
 
 export function Projects() {
 
-    
- 
-    //  function animate() {
-    //     let animationContainer = (document.querySelector("#animation") as HTMLDivElement );
-    //     animationContainer.style.opacity = "1";
-    //     console.log(animationContainer.style.opacity);
-    // }  
+    const repos = useContext(RepoContext);
+
+    let html = repos.map((r, i) => {
+       return <span key={i}> <Link to={"project/" + (i)} >{r.name}</Link> </span>
+    })
+  useEffect(() => {
+
+  }, [])
+  
 
     return ( <div id="projects">
             <div>
@@ -17,9 +24,7 @@ export function Projects() {
             </div>
 
             <div id="projectsList">
-                 <span><Link to="project/1">Finished-Design</Link></span>
-                 <span><Link to="project/2">TodoList</Link></span>
-                 <span><Link to="project/3">Webshop</Link></span>
+              {html}   
             </div>
     </div> )
 }
