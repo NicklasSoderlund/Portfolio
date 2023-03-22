@@ -3,22 +3,6 @@ import { useState } from "react";
 import { IOctokitResponse } from "../models/IOctokitResponse";
 
 
-/* const octokit = new Octokit({
-    auth: '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'
-  }); */
-
-/* export async function projectService(project:string) {
-    
- 
-
-    let response =   await octokit.request('GET /repos/{owner}/{repo}', {
-      owner: 'NicklasSoderlund',
-      repo: project
-   })
-     ;
-    return response 
-
-} */
 
 export async function repoService(repo:string) {
 
@@ -27,4 +11,9 @@ export async function repoService(repo:string) {
   return response.data as IOctokitResponse
   
 
+}
+
+export async function getRepos() {
+  let response = await axios.get("https://api.github.com/users/NicklasSoderlund/repos")
+  console.log(response.data);
 }
